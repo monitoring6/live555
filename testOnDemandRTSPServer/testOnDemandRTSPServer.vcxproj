@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{A60440DF-3260-4B2D-B95B-A41D18B8FE2D}</ProjectGuid>
-    <RootNamespace>mediaServer</RootNamespace>
+    <ProjectGuid>{A731F6CB-BC29-4822-88E0-5067F7A02470}</ProjectGuid>
+    <RootNamespace>testOnDemandRTSPServer</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -68,25 +68,18 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(Platform)\$(Configuration)\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(Platform)\$(Configuration)\</IntDir>
-  </PropertyGroup>
+  <PropertyGroup />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(SolutionDir)groupsock\include\;$(SolutionDir)LiveMedia\include\;$(SolutionDir)UsageEnvironment\include\;$(SolutionDir)BasicUsageEnvironment\include\</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)groupsock\include\;$(SolutionDir)LiveMedia\include\;$(SolutionDir)UsageEnvironment\include\;$(SolutionDir)BasicUsageEnvironment\include\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>ws2_32.lib;BasicUsageEnvironment.lib;groupsock.lib;liveMedia.lib;UsageEnvironment.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ws2_32.lib;BasicUsageEnvironment.lib;groupsock.lib;liveMedia.lib;UsageEnvironment.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -94,12 +87,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(SolutionDir)groupsock\include\;$(SolutionDir)LiveMedia\include\;$(SolutionDir)UsageEnvironment\include\;$(SolutionDir)BasicUsageEnvironment\include\</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)groupsock\include\;$(SolutionDir)LiveMedia\include\;$(SolutionDir)UsageEnvironment\include\;$(SolutionDir)BasicUsageEnvironment\include\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>ws2_32.lib;BasicUsageEnvironment.lib;groupsock.lib;liveMedia.lib;UsageEnvironment.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ws2_32.lib;BasicUsageEnvironment.lib;groupsock.lib;liveMedia.lib;UsageEnvironment.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -109,14 +102,14 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(SolutionDir)groupsock\include\;$(SolutionDir)LiveMedia\include\;$(SolutionDir)UsageEnvironment\include\;$(SolutionDir)BasicUsageEnvironment\include\</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)groupsock\include\;$(SolutionDir)LiveMedia\include\;$(SolutionDir)UsageEnvironment\include\;$(SolutionDir)BasicUsageEnvironment\include\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>ws2_32.lib;BasicUsageEnvironment.lib;groupsock.lib;liveMedia.lib;UsageEnvironment.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ws2_32.lib;BasicUsageEnvironment.lib;groupsock.lib;liveMedia.lib;UsageEnvironment.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -126,23 +119,18 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(SolutionDir)groupsock\include\;$(SolutionDir)LiveMedia\include\;$(SolutionDir)UsageEnvironment\include\;$(SolutionDir)BasicUsageEnvironment\include\</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)groupsock\include\;$(SolutionDir)LiveMedia\include\;$(SolutionDir)UsageEnvironment\include\;$(SolutionDir)BasicUsageEnvironment\include\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>ws2_32.lib;BasicUsageEnvironment.lib;groupsock.lib;liveMedia.lib;UsageEnvironment.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ws2_32.lib;BasicUsageEnvironment.lib;groupsock.lib;liveMedia.lib;UsageEnvironment.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="include\DynamicRTSPServer.hh" />
-    <ClInclude Include="include\version.hh" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="src\DynamicRTSPServer.cpp" />
-    <ClCompile Include="src\live555MediaServer.cpp" />
+    <ClCompile Include="src\testOnDemandRTSPServer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
